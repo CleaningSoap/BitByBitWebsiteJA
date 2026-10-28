@@ -1,157 +1,117 @@
-/* BitByBit — placeholder product catalogue, filters, and quick-view dialog.
-   Replace PRODUCTS below with real products when the team is ready. */
+/* BitByBit — fridge magnet catalogue, filters, and quick-view dialog. */
 (function () {
   "use strict";
 
   var BB = (window.BitByBit = window.BitByBit || {});
 
   var CATEGORIES = {
-    keychains: "Keychains",
-    magnets: "Magnets",
-    frames: "Frames",
-    desk: "Desk"
+    snowmelts: "Snowmelts",
+    "itty-bitty-canvas": "Itty Bitty Canvas",
+    canadots: "Canadots",
+    meltimals: "Meltimals"
   };
 
   var PRODUCTS = [
     {
-      id: "product-01",
-      name: "Product Placeholder 01",
-      category: "keychains",
+      id: "snowmelts-christmas-star",
+      name: "Christmas Star",
+      category: "snowmelts",
       price: null,
-      image: "assets/img/product-placeholder-one.svg",
-      alt: "Placeholder for product image 01",
-      badge: "Placeholder",
-      badgeClass: "tag--ghost",
+      image: "assets/img/products/christmas-star.jpg",
+      alt: "Christmas Star fridge magnet made from perler beads, wearing a Santa hat",
+      badge: "Limited edition",
+      badgeClass: "tag--pink",
       blurb:
-        "A placeholder card for a future BitByBit product. The final name, description, photo, and details are coming soon.",
+        "Placeholder description for the Snowmelts collection. Final copy for this Christmas-themed fridge magnet is coming soon.",
       specs: [
-        ["Details", "To be confirmed"],
-        ["Materials", "To be confirmed"],
-        ["Care", "To be confirmed"]
+        ["Collection", "Snowmelts"],
+        ["Format", "Fridge magnet"],
+        ["Details", "To be confirmed"]
       ]
     },
     {
-      id: "product-02",
-      name: "Product Placeholder 02",
-      category: "magnets",
+      id: "itty-bitty-canvas-starry-night",
+      name: "Starry Night",
+      category: "itty-bitty-canvas",
       price: null,
-      image: "assets/img/product-placeholder-two.svg",
-      alt: "Placeholder for product image 02",
-      badge: "Placeholder",
-      badgeClass: "tag--ghost",
+      image: "assets/img/products/starry-night.jpg",
+      alt: "Starry Night fridge magnet recreated in perler beads",
       blurb:
-        "Product details are coming soon. This card shows where a real BitByBit item will appear.",
+        "Placeholder description for the Itty Bitty Canvas collection. Final copy for this miniature painting recreation is coming soon.",
       specs: [
-        ["Details", "To be confirmed"],
-        ["Materials", "To be confirmed"],
-        ["Care", "To be confirmed"]
+        ["Collection", "Itty Bitty Canvas"],
+        ["Format", "Fridge magnet"],
+        ["Details", "To be confirmed"]
       ]
     },
     {
-      id: "product-03",
-      name: "Product Placeholder 03",
-      category: "keychains",
+      id: "canadots-canada-flag",
+      name: "Canada Flag",
+      category: "canadots",
       price: null,
-      image: "assets/img/product-placeholder-three.svg",
-      alt: "Placeholder for product image 03",
-      badge: "Placeholder",
-      badgeClass: "tag--ghost",
+      image: "assets/img/products/canada-flag.jpg",
+      alt: "Canadian flag fridge magnet made from perler beads",
       blurb:
-        "A placeholder slot for the upcoming lineup. Check back for the real product and photos.",
+        "Placeholder description for the Canadots collection. Final copy for this Canadian-themed fridge magnet is coming soon.",
       specs: [
-        ["Details", "To be confirmed"],
-        ["Materials", "To be confirmed"],
-        ["Care", "To be confirmed"]
+        ["Collection", "Canadots"],
+        ["Format", "Fridge magnet"],
+        ["Details", "To be confirmed"]
       ]
     },
     {
-      id: "product-04",
-      name: "Product Placeholder 04",
-      category: "desk",
+      id: "meltimals-crab",
+      name: "Crab",
+      category: "meltimals",
       price: null,
-      image: "assets/img/product-placeholder-four.svg",
-      alt: "Placeholder for product image 04",
-      badge: "Placeholder",
-      badgeClass: "tag--ghost",
+      image: "assets/img/products/crab.jpg",
+      alt: "Crab fridge magnet made from perler beads",
       blurb:
-        "This card is waiting for a real product. Details, materials, and pricing will be added soon.",
+        "Placeholder description for the Meltimals collection. Final copy for this animal fridge magnet is coming soon.",
       specs: [
-        ["Details", "To be confirmed"],
-        ["Materials", "To be confirmed"],
-        ["Care", "To be confirmed"]
+        ["Collection", "Meltimals"],
+        ["Format", "Fridge magnet"],
+        ["Details", "To be confirmed"]
       ]
     },
     {
-      id: "product-05",
-      name: "Product Placeholder 05",
-      category: "frames",
+      id: "meltimals-beaver",
+      name: "Beaver",
+      category: "meltimals",
       price: null,
-      image: "assets/img/product-placeholder-five.svg",
-      alt: "Placeholder for product image 05",
-      badge: "Placeholder",
-      badgeClass: "tag--ghost",
+      image: "assets/img/products/beaver.jpg",
+      alt: "Beaver fridge magnet made from perler beads",
       blurb:
-        "A placeholder card for the shop layout. Final product information is coming soon.",
+        "Placeholder description for the Meltimals collection. Final copy for this animal fridge magnet is coming soon.",
       specs: [
-        ["Details", "To be confirmed"],
-        ["Materials", "To be confirmed"],
-        ["Care", "To be confirmed"]
+        ["Collection", "Meltimals"],
+        ["Format", "Fridge magnet"],
+        ["Details", "To be confirmed"]
       ]
     },
     {
-      id: "product-06",
-      name: "Product Placeholder 06",
-      category: "keychains",
+      id: "meltimals-cat",
+      name: "Cat",
+      category: "meltimals",
       price: null,
-      image: "assets/img/product-placeholder-six.svg",
-      alt: "Placeholder for product image 06",
-      badge: "Placeholder",
-      badgeClass: "tag--ghost",
+      image: "assets/img/products/cat.jpg",
+      alt: "Cat fridge magnet made from perler beads",
       blurb:
-        "This placeholder marks another spot in the lineup. Real photos and details are on the way.",
+        "Placeholder description for the Meltimals collection. Final copy for this animal fridge magnet is coming soon.",
       specs: [
-        ["Details", "To be confirmed"],
-        ["Materials", "To be confirmed"],
-        ["Care", "To be confirmed"]
-      ]
-    },
-    {
-      id: "product-07",
-      name: "Product Placeholder 07",
-      category: "magnets",
-      price: null,
-      image: "assets/img/product-placeholder-seven.svg",
-      alt: "Placeholder for product image 07",
-      badge: "Placeholder",
-      badgeClass: "tag--ghost",
-      blurb:
-        "Another placeholder slot for a future product. Check back soon for the real lineup.",
-      specs: [
-        ["Details", "To be confirmed"],
-        ["Materials", "To be confirmed"],
-        ["Care", "To be confirmed"]
-      ]
-    },
-    {
-      id: "product-08",
-      name: "Product Placeholder 08",
-      category: "desk",
-      price: null,
-      image: "assets/img/product-placeholder-eight.svg",
-      alt: "Placeholder for product image 08",
-      badge: "Placeholder",
-      badgeClass: "tag--ghost",
-      blurb:
-        "This is the last placeholder slot in the current layout. The real product catalogue is coming soon.",
-      specs: [
-        ["Details", "To be confirmed"],
-        ["Materials", "To be confirmed"],
-        ["Care", "To be confirmed"]
+        ["Collection", "Meltimals"],
+        ["Format", "Fridge magnet"],
+        ["Details", "To be confirmed"]
       ]
     }
   ];
 
-  var FEATURED_IDS = ["product-01", "product-02", "product-03", "product-04"];
+  var FEATURED_IDS = [
+    "snowmelts-christmas-star",
+    "itty-bitty-canvas-starry-night",
+    "canadots-canada-flag",
+    "meltimals-cat"
+  ];
 
   function money(price) {
     if (price === null || price === undefined || price === "") return "Price TBD";
@@ -175,7 +135,7 @@
       'aria-label="Quick view: ' + BB.escapeHTML(product.name) + ", " + money(product.price) + '">' +
       '<span class="product-media">' +
       '<img src="' + BB.escapeHTML(product.image) + '" alt="' + BB.escapeHTML(product.alt) + '" ' +
-      'width="420" height="320" loading="lazy">' +
+      'width="800" height="600" loading="lazy">' +
       '<span class="product-badges">' + badge + "</span>" +
       '<span class="product-quick">Quick view +</span>' +
       "</span>" +
@@ -196,7 +156,7 @@
     if (!container) return;
     container.innerHTML = list.length
       ? list.map(cardHTML).join("")
-      : '<p class="product-empty">No products in this collection yet. Check back soon.</p>';
+      : '<p class="product-empty">No magnets in this collection yet. Check back soon.</p>';
   }
 
   /* ----------------------------------------------------------------------
@@ -214,12 +174,12 @@
     dialog.innerHTML =
       '<div class="modal__header">' +
       '<div><h2 id="product-dialog-title">Product details</h2>' +
-      '<p>Placeholder card · real details coming soon</p></div>' +
+      '<p>Fridge magnet · full details coming soon</p></div>' +
       '<button type="button" class="modal__close" data-close aria-label="Close product details">×</button>' +
       "</div>" +
       '<div class="modal__body">' +
       '<div class="product-dialog__layout">' +
-      '<div class="product-dialog__media"><img data-qv-image src="" alt=""></div>' +
+      '<div class="product-dialog__media"><img data-qv-image src="" alt="" width="800" height="600"></div>' +
       '<div class="product-dialog__info">' +
       '<p class="product-category" data-qv-category></p>' +
       '<h2 id="product-dialog-name" data-qv-name></h2>' +
@@ -228,10 +188,10 @@
       '<dl class="spec-list" data-qv-specs></dl>' +
       '<div class="product-dialog__actions">' +
       '<a class="btn btn--pink" href="schedule.html">See sales days</a>' +
-      '<a class="btn btn--paper" data-qv-email href="mailto:bitbybitja@gmail.com">Ask about custom orders</a>' +
+      '<a class="btn btn--paper" data-qv-email href="mailto:bitbybitja@gmail.com">Ask about this magnet</a>' +
       "</div>" +
-      '<p class="product-dialog__note">This card is a placeholder. Product details, photos, and pricing are coming soon. ' +
-      "No online checkout; the real lineup will be sold in person at sales days.</p>" +
+      '<p class="product-dialog__note">Descriptions and pricing are placeholders for now. ' +
+      "These magnets are sold in person at our sales days — there is no online checkout.</p>" +
       "</div>" +
       "</div>" +
       "</div>";
@@ -270,7 +230,7 @@
     var email = d.querySelector("[data-qv-email]");
     email.href =
       "mailto:bitbybitja@gmail.com?subject=" +
-      encodeURIComponent("Product question — " + product.name);
+      encodeURIComponent("Magnet question — " + product.name);
 
     d.showModal();
   }
@@ -305,7 +265,7 @@
     function updateCount(list) {
       if (!count) return;
       count.textContent =
-        list.length + " placeholder " + (list.length === 1 ? "product" : "products");
+        list.length + " fridge " + (list.length === 1 ? "magnet" : "magnets");
     }
 
     function applyFilter(category, updateUrl) {
