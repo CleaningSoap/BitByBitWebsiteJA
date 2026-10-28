@@ -2,13 +2,26 @@
 
 A static storefront for **BitByBit**, a student-run company in the Junior Achievement Company Program. The visual language is perler-bead pixel art: chunky borders, hard shadows, pegboard textures, and bead-grid accents.
 
-The site is deliberately in a **placeholder state**:
+The shop is a **fridge magnet** lineup across four collections. **Snowmelts is limited edition; the other three are permanent lines.**
 
-- All current products are replaced by eight generic placeholder cards with **Price TBD** and placeholder images.
-- Most content images are generic placeholder graphics. The BitByBit logo and favicon remain real brand assets.
-- The public sales calendar is **empty** and **read-only**. There are no demo events and no public edit controls.
-- Team members can maintain the schedule in a separate, unlinked editor and publish it as a static data file.
-- There are no accounts, sign-in, cart, checkout, or server.
+| Collection | Availability | Theme | Catalogue |
+| --- | --- | --- | --- |
+| **Snowmelts** | Limited edition | Christmas | Christmas Star |
+| **Itty Bitty Canvas** | Permanent | Famous painting recreations | Starry Night |
+| **Canadots** | Permanent | Canadian | Canada Flag |
+| **Meltimals** | Permanent | Animals | Crab, Beaver, Cat |
+
+Product photos are real; **descriptions and prices remain placeholders** (`Price TBD`) until the team supplies final copy. There is no keychain, frame, or desk-product line.
+
+Other live brand details:
+
+- Slogan: **“A bit of fun in every bag.”**
+- Instagram: **[@bitbybitja](https://www.instagram.com/bitbybitja/)** (linked from every footer and the FAQ).
+- Charity pledge: **20% of net proceeds**. The partner is still a placeholder.
+- Next sales days: **November 14 at St. Laurent Mall, Ottawa** and **December 13 at Merivale Mall, Ottawa**.
+- Theme palette: light pink `#ffbfdc`, green `#bbec72`, yellow `#ffde59`, pastel azure `#91ccff`, pastel lavender `#c9abe4`.
+
+There are no accounts, sign-in, cart, checkout, or server.
 
 ## Preview
 
@@ -50,38 +63,59 @@ Default editor code: **`bitbybit-team`** — change it before launch (see the ca
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Home: static hero banner, placeholder collections/products, story, charity spotlight, community CTA |
-| `about.html` | Company story, JA program, process, values, team placeholders |
-| `products.html` | Placeholder product lookbook with category filters and quick view |
+| `index.html` | Home: hero, four collection tiles, featured magnets, story/process photo, charity spotlight, sales-day CTA |
+| `about.html` | Company story, JA program, process photo, values, team placeholders |
+| `products.html` | Fridge magnet lookbook with collection filters and quick view |
 | `schedule.html` | **Read-only** public sales-day calendar |
-| `charity.html` | Dedicated charity-partner placeholder page |
+| `charity.html` | Charity page with a 20% pledge and placeholder partner details |
 | `faq.html` | Help / FAQ with draft placeholder answers |
 | `404.html` | Static not-found page |
 | `schedule-admin.html` | Private team schedule editor — unlinked, `noindex`, code-gated |
 
 The admin page is not in the navigation, footer, sitemap, or any public page.
 
-## Products are placeholders
+## Products
 
-All eight original product entries were removed. `assets/js/products.js` now contains:
+`assets/js/products.js` is the single source of truth for the catalogue. Each entry has:
 
-- **Product Placeholder 01–08**
-- `price: null`, rendered as **Price TBD**
-- Category slots: keychains, magnets, frames, desk
-- Generic placeholder images: `assets/img/product-placeholder-one.svg` … `product-placeholder-eight.svg`
-- Placeholder descriptions and specs
+- `id`, `name`, `category`, `price`
+- `image`, `alt`
+- optional `badge` / `badgeClass` (only Snowmelts currently uses one)
+- placeholder `blurb` and `specs`
 
-To add the real lineup, edit `PRODUCTS` in `assets/js/products.js`:
+Current entries:
 
-- Set `name`, `blurb`, `image`, `alt`, and `price`.
+| ID | Name | Category | Image |
+| --- | --- | --- | --- |
+| `snowmelts-christmas-star` | Christmas Star | `snowmelts` | `assets/img/products/christmas-star.jpg` |
+| `itty-bitty-canvas-starry-night` | Starry Night | `itty-bitty-canvas` | `assets/img/products/starry-night.jpg` |
+| `canadots-canada-flag` | Canada Flag | `canadots` | `assets/img/products/canada-flag.jpg` |
+| `meltimals-crab` | Crab | `meltimals` | `assets/img/products/crab.jpg` |
+| `meltimals-beaver` | Beaver | `meltimals` | `assets/img/products/beaver.jpg` |
+| `meltimals-cat` | Cat | `meltimals` | `assets/img/products/cat.jpg` |
+
+To finish the catalogue:
+
+- Replace each `blurb` with the real product description.
 - Set `price` to a number (for example `8`) to render `$8.00`, or leave it `null` for **Price TBD**.
 - Adjust `specs` for size, materials, and care.
-- Remove unused placeholder cards.
+- Keep every product image at **4:3 (800 × 600)** so cards and quick view stay aligned. The two portrait source photos (flag, crab) were center-cropped to 4:3 during processing.
 - Update `FEATURED_IDS` if the home-page selection should change.
 - If the team uses a currency other than `$`, update `money()` in the same file.
-- Replace or remove the `"Placeholder"` badge on each product.
 
-Home-page collection tiles use the four `collection-*.svg` placeholders and link to the category filters.
+Home-page collection tiles use one representative photo per collection and link to the matching `?category=` filter. Collection keys are `snowmelts`, `itty-bitty-canvas`, `canadots`, and `meltimals`.
+
+Availability is carried by the card badge only where it matters: Snowmelts uses **Limited edition** (`tag--pink`); the three permanent lines are unbadged. The collection copy on the shop page spells out which lines are permanent.
+
+## Brand assets
+
+- `assets/img/logo-mark.png` — the BitByBit pixel banner logo with the black background removed, transparent, 480 × 614.
+- `assets/img/favicon-64.png`, `favicon-192.png`, `favicon-512.png` — browser tab, Apple touch, and PWA icons generated from the logo.
+- `assets/img/hero.jpg` — home hero background (1600 × 900).
+- `assets/img/process.jpg` — behind-the-scenes production photo (1200 × 900), used on the home story and about pages.
+- `assets/img/products/*.jpg` — six product photos, 800 × 600.
+
+The logo is used on dark surfaces (header, footer, community panel), so keep the transparent PNG rather than flattening it onto white.
 
 ## Public calendar is read-only
 
@@ -92,25 +126,18 @@ Home-page collection tiles use the four `collection-*.svg` placeholders and link
 3. `assets/js/schedule-data.js` (the published schedule)
 4. `assets/js/schedule.js` (read-only view)
 
-The public page **does not** load `schedule-admin.js` and contains:
+The public page **does not** load `schedule-admin.js` and contains no add/edit controls or calendar writes.
 
-- No **New event** button
-- No add buttons on calendar days
-- No event editor dialog
-- No `data-event-id` edit hooks
-- No calendar writes to localStorage
+Published events:
 
-Visitors can navigate months, read event titles/times/locations, and nothing else. The current published data has no events:
+| Date | Event | Location |
+| --- | --- | --- |
+| 2026-11-14 | BitByBit at St. Laurent Mall | St. Laurent Mall, Ottawa |
+| 2026-12-13 | BitByBit at Merivale Mall | Merivale Mall, Ottawa |
 
-```js
-window.BITBYBIT_SCHEDULE = {
-  "version": 1,
-  "updated": "",
-  "events": []
-};
-```
+Times are not set yet, so the public calendar shows **Time TBA** until the team adds start/end times. The page opens on the next month that has a sales day instead of the current month when the current month is empty.
 
-The page shows an empty-state notice, an empty “Next up” panel, and a “No sales days scheduled this month” hint.
+To publish a change, use the team editor or edit `assets/js/schedule-data.js` directly, then bump the `?v=` query on the `schedule-data.js` script in `schedule.html` and `schedule-admin.html` (currently `?v=initial`) or purge the host cache.
 
 ## Team calendar editor
 
@@ -142,84 +169,66 @@ Editor details:
 - Internal notes are stored in the data file but are **not displayed** on the public calendar.
 - The public page shows the `updated` timestamp from the published file as “Last published …”.
 - Categories: `sale`, `market`, `school`, `custom`, `other`.
-- Published shape:
-  ```json
-  {
-    "version": 1,
-    "updated": "2026-10-25T12:00:00.000Z",
-    "events": [
-      {
-        "id": "uuid",
-        "date": "2026-11-07",
-        "start": "10:00",
-        "end": "14:00",
-        "title": "Pop-Up Sale",
-        "category": "sale",
-        "location": "Location TBA",
-        "notes": ""
-      }
-    ]
-  }
-  ```
 
 ## Home banner
 
 The home-page hero banner is static markup in `index.html`:
 
-- Eyebrow, headline (line breaks preserved), description, CTA label/link, and accent color (`--hero-accent`) live in the `#hero` section
-- The background image is `assets/img/banner-placeholder.svg`
+- Eyebrow, headline, description, CTA label/link, and accent color (`--hero-accent`) live in the `#hero` section.
+- The background image is `assets/img/hero.jpg`.
+- The hero background is decorative (`alt=""`); keep the copy meaningful without it.
 
 To change the banner for visitors, edit that section directly. There is no in-browser banner editor.
 
 ## Contact details
 
 - Email: **bitbybitja@gmail.com** — present on every public page footer, the FAQ contact card, and the charity page.
-- Instagram: placeholder, displayed as `@placeholder` with a TBA/coming-soon tag. It is not linked.
+- Instagram: **[@bitbybitja](https://www.instagram.com/bitbybitja/)** — lowercase `bitbybitja`; the handle is case-sensitive on the account itself. It is linked in every footer, the home community panel, and the FAQ.
 
-To launch Instagram:
+If the handle changes:
 
-1. Search for `@placeholder` across the six main HTML pages (14 occurrences).
-2. Replace with the real handle.
-3. Turn the `.ig-row` footer content into a link:
-   ```html
-   <div class="ig-row"><span>Instagram:</span><a href="https://instagram.com/YOUR_HANDLE">@YOUR_HANDLE</a></div>
-   ```
-4. Update the FAQ and home community copy.
+1. Search for `bitbybitja` across the HTML files.
+2. Replace the display text and the `https://www.instagram.com/…` URL.
+3. Update the FAQ contact answer and the home community block.
 
-## Image placeholders
+## Theme
 
-All content images are now explicit placeholder SVGs, except the brand logo and favicon. Recommended sizes:
+All colours live in `:root` in `assets/css/site.css`:
+
+```css
+--pink: #ffbfdc;
+--green: #bbec72;
+--yellow: #ffde59;
+--azure: #91ccff;
+--lavender: #c9abe4;
+```
+
+Legacy aliases (`--mint`, `--lemon`, `--blue`, `--purple`) point at the new values, and soft background tints are defined alongside them. Calendar category colours in `assets/js/schedule-core.js` and the legend dots in the schedule pages use the same palette.
+
+Typography uses Pixelify Sans for headings and buttons, and Inter (`--label`) for small uppercase labels: navigation, breadcrumbs, eyebrows, tags, filter buttons, product cards, table labels, and footer headings. This keeps the pixel look while making short words such as “Charity” legible at small sizes. Donation and statistic figures also use Inter with tabular numerals so digits such as the `2` in `20%` read clearly.
+
+## Image placeholders still in use
+
+Real product, process, hero, and logo images are in place. These placeholders remain:
 
 | File | Used for | Recommended |
 | --- | --- | --- |
-| `assets/img/banner-placeholder.svg` | Home hero default background | 1600 × 900 |
-| `assets/img/product-placeholder-one.svg` … `product-placeholder-eight.svg` | Product cards + quick view | 420 × 320 |
-| `assets/img/collection-keychains.svg` | Home collection tile | 420 × 320 |
-| `assets/img/collection-magnets.svg` | Home collection tile | 420 × 320 |
-| `assets/img/collection-frames.svg` | Home collection tile | 420 × 320 |
-| `assets/img/collection-desk.svg` | Home collection tile | 420 × 320 |
-| `assets/img/feature-placeholder.svg` | Products page feature block | 1200 × 800 |
-| `assets/img/about-placeholder.svg` | About/home workshop photo | 1200 × 800 |
-| `assets/img/charity-placeholder.svg` | Charity page / home spotlight | 1200 × 800 |
-| `assets/img/team-placeholder.svg` | Team member + group photo slots | 600 × 600 |
-| `assets/img/logo-mark.svg` | Brand mark (kept) | 110 × 100 |
-| `assets/img/favicon.svg` | Browser icon (kept) | 64 × 64 |
+| `assets/img/charity-placeholder.svg` | Charity page + home charity spotlight | 1200 × 800 |
+| `assets/img/team-placeholder.svg` | About team cards + group photo slot | 600 × 600 |
 
 Notes:
 
 - Page-level photos in `<figure class="img-frame" data-slot="…">` show a small **IMG SLOT** badge. Remove the `data-slot` attribute after swapping in a real photo.
 - Product photo paths live in `assets/js/products.js`; collection tile paths are in `index.html`.
-- The placeholder SVGs themselves contain a slot filename and dimensions, so it is obvious which file to replace.
-- Use compressed WebP/JPEG for real photos. If the aspect ratio changes, update the `width`/`height` attributes and the relevant CSS `aspect-ratio`.
+- Use compressed WebP/JPEG for new photos. If the aspect ratio changes, update the `width`/`height` attributes and the relevant CSS `aspect-ratio`.
 
-## Other placeholder content to replace
+## Placeholder content to replace
 
-- `Placeholder` / `TBD` / `TBA` / `[X]` — charity page, FAQ policies, team names, Instagram.
-- `Team Member` — about-page team cards.
-- `Charity name coming soon.` and partner detail rows.
-- Draft FAQ answers for shipping, payment, reservations, and custom lead times.
-- The product cards, descriptions, and **Price TBD** labels.
-- The empty sales calendar (publish real dates through the team editor).
+- Charity partner name, mission, location, website, and story (20% pledge is real).
+- Team names and photos on the about page.
+- FAQ draft answers for shipping, payment, reservations, and custom lead times.
+- Product descriptions and **Price TBD** labels.
+- Sales-day times.
 
 ## Structure
 
@@ -240,12 +249,17 @@ bitbybitja/
     ├── css/site.css
     ├── js/
     │   ├── site.js          # nav, dialogs, toast, footer year, FAQ hash targets
-    │   ├── products.js      # placeholder catalogue, filters, quick view
+    │   ├── products.js      # magnet catalogue, filters, quick view
     │   ├── schedule-core.js # shared calendar rendering/helpers
-    │   ├── schedule-data.js # published events (currently empty)
+    │   ├── schedule-data.js # published events
     │   ├── schedule.js      # read-only public calendar
     │   └── schedule-admin.js# private team editor/draft/publish
-    └── img/                 # placeholder SVGs + brand mark
+    └── img/
+        ├── products/        # six 800 × 600 product photos
+        ├── logo-mark.png    # transparent brand logo
+        ├── hero.jpg
+        ├── process.jpg
+        └── …                # favicon, charity/team placeholders
 ```
 
 ## Accessibility and behavior notes
@@ -257,15 +271,3 @@ bitbybitja/
 - Fonts come from Google Fonts (`Pixelify Sans`, `Press Start 2P`, `Inter`) with local fallbacks.
 - The site works without JavaScript for reading copy, but product cards, filters, the calendar, and the team editor require JavaScript.
 - Browser storage may be blocked in private modes; the team editor reports save failures instead of silently claiming success.
-
-## QA performed
-
-Served at `http://bitbybitja.localhost:4173/` and checked across the following flows:
-
-- Public pages at 1440 px, tablet, and mobile widths (down to 320 px): no console errors, failed requests, broken images, duplicate IDs, or horizontal overflow.
-- Product catalogue: eight placeholder cards, **Price TBD**, filters, categories, and quick view.
-- Public calendar: empty state, no add/edit buttons, no editor dialog, no edit hooks, no calendar localStorage writes.
-- Published-data test: temporarily seeded a published event; the public page rendered it as non-interactive text (no edit hooks) and restored the empty data afterward.
-- Team editor: gate rejects incorrect code, accepts the default code, adds draft events, persists drafts, downloads a valid `schedule-data.js`, and does not affect the public page.
-- Banner editor: opens with the placeholder image, live preview, save/reload persistence, and reset.
-- Internal links and local assets audited after the word-based filename changes; no broken references.
