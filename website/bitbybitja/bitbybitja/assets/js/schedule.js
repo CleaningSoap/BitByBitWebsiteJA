@@ -19,6 +19,26 @@
   var now = new Date();
   var cursor = new Date(now.getFullYear(), now.getMonth(), 1);
 
+  // Open on the next month that actually has a sales day, so upcoming dates
+  // are visible without paging forward manually.
+  var currentMonth = BB.calendar.keyOf(cursor).slice(0, 7);
+  var hasThisMonth = events.some(function (event) {
+    return event.date.slice(0, 7) === currentMonth;
+  });
+  if (!hasThisMonth) {
+    var nextEvent = events
+      .filter(function (event) {
+        return event.date >= BB.calendar.keyOf(now);
+      })
+      .sort(function (a, b) {
+        return a.date < b.date ? -1 : 1;
+      })[0];
+    if (nextEvent) {
+      var nextDate = BB.calendar.parseKey(nextEvent.date);
+      cursor = new Date(nextDate.getFullYear(), nextDate.getMonth(), 1);
+    }
+  }
+
   if (emptyNote) emptyNote.hidden = events.length > 0;
 
   if (updatedNote) {
