@@ -5,11 +5,11 @@
   var BB = (window.BitByBit = window.BitByBit || {});
 
   var CATEGORIES = {
-    sale: { label: "Pop-up sale", color: "#ff4f8b", bg: "#ffe1eb" },
-    market: { label: "Community market", color: "#4d7cff", bg: "#e2e9ff" },
-    school: { label: "School store", color: "#3ddc97", bg: "#dcf9ec" },
-    custom: { label: "Custom pickup", color: "#ffd23f", bg: "#fff4c4" },
-    other: { label: "Other", color: "#9b6bff", bg: "#efe6ff" }
+    sale: { label: "Pop-up sale", color: "#ffbfdc", bg: "#ffe9f3" },
+    market: { label: "Community market", color: "#91ccff", bg: "#e3f2ff" },
+    school: { label: "School store", color: "#bbec72", bg: "#eafbcf" },
+    custom: { label: "Custom pickup", color: "#ffde59", bg: "#fff6cc" },
+    other: { label: "Other", color: "#c9abe4", bg: "#f0e6fa" }
   };
 
   var MONTHS_SHORT = [
@@ -57,7 +57,7 @@
   }
 
   function formatTime(value) {
-    if (!value) return "All day";
+    if (!value) return "Time TBA";
     var parts = String(value).split(":");
     var hours = Number(parts[0]);
     var minutes = parts[1] || "00";
@@ -68,7 +68,7 @@
   }
 
   function formatRange(event) {
-    if (!event.start) return "All day";
+    if (!event.start) return "Time TBA";
     if (event.end) return formatTime(event.start) + "–" + formatTime(event.end);
     return formatTime(event.start);
   }
