@@ -10,16 +10,24 @@
   --surface: #fffaf0;
   --surface-2: #ece2ce;
   --muted: #6c6479;
-  --pink: #ff4f8b;
-  --pink-soft: #ffe1eb;
-  --blue: #4d7cff;
-  --blue-soft: #e2e9ff;
-  --mint: #3ddc97;
-  --mint-soft: #dcf9ec;
-  --lemon: #ffd23f;
-  --lemon-soft: #fff4c4;
+  --pink: #ffbfdc;
+  --pink-soft: #ffe9f3;
+  --green: #bbec72;
+  --green-soft: #eafbcf;
+  --yellow: #ffde59;
+  --yellow-soft: #fff6cc;
+  --azure: #91ccff;
+  --azure-soft: #e3f2ff;
+  --lavender: #c9abe4;
+  --lavender-soft: #f0e6fa;
+  --blue: var(--azure);
+  --blue-soft: var(--azure-soft);
+  --mint: var(--green);
+  --mint-soft: var(--green-soft);
+  --lemon: var(--yellow);
+  --lemon-soft: var(--yellow-soft);
   --orange: #ff8a3d;
-  --purple: #9b6bff;
+  --purple: var(--lavender);
   --danger: #ff6b6b;
   --line: #1b1726;
   --border: 3px solid var(--line);
@@ -28,6 +36,7 @@
   --display: "Pixelify Sans", "Trebuchet MS", "Segoe UI", sans-serif;
   --pixel: "Press Start 2P", ui-monospace, "Courier New", monospace;
   --body: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --label: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --wrap: 1180px;
   --gutter: clamp(18px, 4vw, 32px);
   --radius: 4px;
@@ -180,10 +189,10 @@ main:focus {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: var(--display);
+  font-family: var(--label);
   font-size: 0.84rem;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   line-height: 1.2;
   text-transform: uppercase;
   color: var(--ink);
@@ -280,9 +289,9 @@ main:focus {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-family: var(--label);
   font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--muted);
@@ -294,12 +303,13 @@ main:focus {
 
 .tag {
   display: inline-block;
-  font-family: var(--pixel);
-  font-size: 0.45rem;
-  line-height: 1.4;
-  letter-spacing: 0.02em;
+  font-family: var(--label);
+  font-size: 0.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  padding: 5px 6px 4px;
+  padding: 5px 7px 4px;
   border: 2px solid var(--line);
   background: var(--lemon);
   color: var(--ink);
@@ -308,7 +318,7 @@ main:focus {
 
 .tag--pink { background: var(--pink); }
 .tag--mint { background: var(--mint); }
-.tag--blue { background: #c4d2ff; color: var(--ink); }
+.tag--blue { background: var(--azure-soft); color: var(--ink); }
 .tag--ghost { background: transparent; border-style: dashed; }
 
 /* --------------------------------------------------------------------------
@@ -507,10 +517,10 @@ main:focus {
   position: relative;
   display: inline-block;
   padding: 8px 0;
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: 0.98rem;
-  letter-spacing: 0.08em;
+  font-family: var(--label);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   text-decoration: none;
   color: #e9e3f1;
@@ -747,10 +757,10 @@ main:focus {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: var(--display);
-  font-size: 0.82rem;
+  font-family: var(--label);
+  font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.11em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: #e9e3f1;
 }
@@ -899,10 +909,10 @@ main:focus {
   background: var(--ink);
   color: var(--paper);
   border: 2px solid var(--line);
-  font-family: var(--display);
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-family: var(--label);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;
   opacity: 0;
@@ -917,30 +927,38 @@ main:focus {
 }
 
 .product-body {
-  padding: 13px 15px 17px;
+  display: block;
+  padding: 18px 18px 22px;
 }
 
 .product-category {
-  font-family: var(--display);
-  font-size: 0.76rem;
-  font-weight: 600;
-  letter-spacing: 0.13em;
+  display: block;
+  font-family: var(--label);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--muted);
 }
 
 .product-name {
-  margin-top: 4px;
-  font-family: var(--display);
-  font-size: 1.24rem;
+  display: block;
+  margin-top: 10px;
+  font-family: var(--label);
+  font-size: 1.18rem;
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.3;
 }
 
 .product-price {
-  margin-top: 7px;
+  display: block;
+  margin-top: 14px;
+  font-family: var(--label);
   font-size: 0.95rem;
-  font-weight: 700;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
 }
 
 .product-price span {
@@ -989,10 +1007,10 @@ main:focus {
   background: var(--surface);
   border: 2px solid var(--line);
   box-shadow: 3px 3px 0 var(--line);
-  font-family: var(--display);
+  font-family: var(--label);
   font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   transition: transform 100ms steps(2), box-shadow 100ms steps(2), background 100ms linear;
 }
@@ -1146,18 +1164,20 @@ main:focus {
 .stat-strip__item:last-child { border-right: 0; }
 
 .stat-strip__value {
-  font-family: var(--display);
+  font-family: var(--label);
   font-size: clamp(1.7rem, 3vw, 2.5rem);
   font-weight: 700;
   line-height: 1;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
 }
 
 .stat-strip__label {
   margin-top: 6px;
-  font-family: var(--display);
+  font-family: var(--label);
   font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--muted);
 }
@@ -1229,6 +1249,11 @@ main:focus {
   max-width: 50ch;
 }
 
+.community__inner p a {
+  color: var(--pink);
+  font-weight: 600;
+}
+
 .community__actions {
   display: flex;
   flex-wrap: wrap;
@@ -1269,9 +1294,10 @@ main:focus {
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
-  font-family: var(--display);
+  font-family: var(--label);
+  font-weight: 600;
   font-size: 0.8rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #b9b1c8;
 }
@@ -1442,7 +1468,7 @@ main:focus {
 
 .process-step:nth-child(2) .process-step__num { background: var(--pink); }
 .process-step:nth-child(3) .process-step__num { background: var(--mint); }
-.process-step:nth-child(4) .process-step__num { background: var(--blue); color: #fff; }
+.process-step:nth-child(4) .process-step__num { background: var(--blue); color: var(--ink); }
 
 .process-step h3 {
   margin-top: 16px;
@@ -1565,10 +1591,10 @@ main:focus {
 }
 
 .partner-card dt {
-  font-family: var(--display);
+  font-family: var(--label);
   font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
 }
@@ -1594,10 +1620,12 @@ main:focus {
 }
 
 .pledge-panel__number {
-  font-family: var(--display);
+  font-family: var(--label);
   font-size: clamp(4rem, 10vw, 7rem);
   font-weight: 700;
   line-height: 0.8;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
   color: var(--pink);
 }
 
@@ -2249,9 +2277,12 @@ main:focus {
 }
 
 .how-card__num {
+  display: inline-block;
+  padding: 3px 5px;
+  background: var(--pink);
+  color: var(--ink);
   font-family: var(--pixel);
   font-size: 0.55rem;
-  color: var(--pink);
 }
 
 /* --------------------------------------------------------------------------
@@ -2440,16 +2471,18 @@ body:has(dialog[open]) {
 .product-dialog__info .product-category { font-size: 0.78rem; }
 
 .product-dialog__info h2 {
-  margin-top: 4px;
-  font-family: var(--display);
+  margin-top: 8px;
+  font-family: var(--label);
   font-size: clamp(1.7rem, 3.5vw, 2.35rem);
-  line-height: 0.98;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .product-dialog__price {
-  margin-top: 10px;
+  margin-top: 12px;
+  font-family: var(--label);
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .product-dialog__desc {
@@ -2474,9 +2507,9 @@ body:has(dialog[open]) {
 }
 
 .spec-list dt {
-  font-family: var(--display);
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  font-family: var(--label);
+  font-weight: 700;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--muted);
 }
@@ -2660,9 +2693,10 @@ code {
   margin-top: 16px;
   padding: 5px 8px;
   border: 2px solid #4a4058;
-  font-family: var(--display);
+  font-family: var(--label);
+  font-weight: 600;
   font-size: 0.75rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ddd6e7;
 }
@@ -2676,10 +2710,10 @@ code {
 
 .footer-col h2,
 .footer-contact h2 {
-  font-family: var(--display);
+  font-family: var(--label);
   font-size: 0.92rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #fff;
 }
@@ -2728,10 +2762,16 @@ code {
   color: #bdb5ca;
 }
 
-.ig-row .placeholder-chip {
-  color: #bdb5ca;
-  border-color: #6c6479;
-  font-size: 0.66rem;
+.ig-row a {
+  color: var(--pink);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid var(--pink);
+}
+
+.ig-row a:hover {
+  color: var(--paper);
+  border-bottom-color: var(--paper);
 }
 
 .footer-bottom {
@@ -2779,6 +2819,7 @@ code {
   font-weight: 700;
   line-height: 0.8;
   color: var(--pink);
+  -webkit-text-stroke: 2px var(--ink);
   text-shadow: 6px 6px 0 var(--ink);
 }
 
