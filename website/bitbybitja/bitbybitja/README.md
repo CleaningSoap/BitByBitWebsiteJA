@@ -11,7 +11,7 @@ The shop is a **fridge magnet** lineup across four collections. **Snowmelts is l
 | **Canadots** | Permanent | Canadian | Canada Flag |
 | **Meltimals** | Permanent | Animals | Crab, Beaver, Cat |
 
-Product photos are real; **descriptions and prices remain placeholders** (`Price TBD`) until the team supplies final copy. There is no keychain, frame, or desk-product line.
+Product photos are real and collection/product descriptions are written. **Prices remain placeholders** (`Price TBD`) until the team supplies numbers. There is no keychain, frame, or desk-product line.
 
 Other live brand details:
 
@@ -81,7 +81,7 @@ The admin page is not in the navigation, footer, sitemap, or any public page.
 - `id`, `name`, `category`, `price`
 - `image`, `alt`
 - optional `badge` / `badgeClass` (only Snowmelts currently uses one)
-- placeholder `blurb` and `specs`
+- real `blurb`; `specs` still awaiting size and material details
 
 Current entries:
 
@@ -96,12 +96,22 @@ Current entries:
 
 To finish the catalogue:
 
-- Replace each `blurb` with the real product description.
 - Set `price` to a number (for example `8`) to render `$8.00`, or leave it `null` for **Price TBD**.
 - Adjust `specs` for size, materials, and care.
 - Keep every product image at **4:3 (800 × 600)** so cards and quick view stay aligned. The two portrait source photos (flag, crab) were center-cropped to 4:3 during processing.
 - Update `FEATURED_IDS` if the home-page selection should change.
 - If the team uses a currency other than `$`, update `money()` in the same file.
+
+### Collection copy
+
+Each collection has one tagline and one description. The full copy renders in the four `.collection-card` articles in `products.html`; the short tagline also appears in the home-page `.collection-tile__tagline` spans in `index.html`. Edit both places together.
+
+| Collection | Tagline | Description |
+| --- | --- | --- |
+| Snowmelts | Deck the fridge. Fill the stocking. | Festive Christmas magnets that dress up the house for the holidays and make an easy stocking stuffer. |
+| Itty Bitty Canvas | A masterpiece, fridge-sized. | Great paintings rebuilt bead by bead — a tiny Louvre for your fridge door. |
+| Canadots | Proudly pixelated, eh. | From coast to coast to fridge: Canadian icons in perler beads. |
+| Meltimals | No fur. No mess. All charm. | Perler-bead animals that melt your heart — pick one and give it a home on the fridge. |
 
 Home-page collection tiles use one representative photo per collection and link to the matching `?category=` filter. Collection keys are `snowmelts`, `itty-bitty-canvas`, `canadots`, and `meltimals`.
 
@@ -227,7 +237,7 @@ Notes:
 - Charity partner name, mission, location, website, and story (20% pledge is real).
 - Team names and photos on the about page.
 - FAQ draft answers for shipping, payment, reservations, and custom lead times.
-- Product descriptions and **Price TBD** labels.
+- **Price TBD** labels and product size/material specs.
 - Sales-day times.
 
 ## Structure
