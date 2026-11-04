@@ -22,7 +22,7 @@
       badge: "Limited edition",
       badgeClass: "tag--pink",
       blurb:
-        "Placeholder description for the Snowmelts collection. Final copy for this Christmas-themed fridge magnet is coming soon.",
+        "A perler-bead Christmas star in a Santa hat — festive holiday decor and an easy stocking stuffer.",
       specs: [
         ["Collection", "Snowmelts"],
         ["Format", "Fridge magnet"],
@@ -37,7 +37,7 @@
       image: "assets/img/products/starry-night.jpg",
       alt: "Starry Night fridge magnet recreated in perler beads",
       blurb:
-        "Placeholder description for the Itty Bitty Canvas collection. Final copy for this miniature painting recreation is coming soon.",
+        "Van Gogh's Starry Night rebuilt bead by bead — a tiny masterpiece for the fridge.",
       specs: [
         ["Collection", "Itty Bitty Canvas"],
         ["Format", "Fridge magnet"],
@@ -52,7 +52,7 @@
       image: "assets/img/products/canada-flag.jpg",
       alt: "Canadian flag fridge magnet made from perler beads",
       blurb:
-        "Placeholder description for the Canadots collection. Final copy for this Canadian-themed fridge magnet is coming soon.",
+        "The maple leaf in perler beads — Canadian culture in the palm of your hand.",
       specs: [
         ["Collection", "Canadots"],
         ["Format", "Fridge magnet"],
@@ -67,7 +67,7 @@
       image: "assets/img/products/crab.jpg",
       alt: "Crab fridge magnet made from perler beads",
       blurb:
-        "Placeholder description for the Meltimals collection. Final copy for this animal fridge magnet is coming soon.",
+        "A perler-bead animal from the Meltimals line — no fur, no mess.",
       specs: [
         ["Collection", "Meltimals"],
         ["Format", "Fridge magnet"],
@@ -82,7 +82,7 @@
       image: "assets/img/products/beaver.jpg",
       alt: "Beaver fridge magnet made from perler beads",
       blurb:
-        "Placeholder description for the Meltimals collection. Final copy for this animal fridge magnet is coming soon.",
+        "A perler-bead animal from the Meltimals line — no fur, no mess.",
       specs: [
         ["Collection", "Meltimals"],
         ["Format", "Fridge magnet"],
@@ -97,7 +97,7 @@
       image: "assets/img/products/cat.jpg",
       alt: "Cat fridge magnet made from perler beads",
       blurb:
-        "Placeholder description for the Meltimals collection. Final copy for this animal fridge magnet is coming soon.",
+        "A perler-bead animal from the Meltimals line — no fur, no mess.",
       specs: [
         ["Collection", "Meltimals"],
         ["Format", "Fridge magnet"],
@@ -174,7 +174,7 @@
     dialog.innerHTML =
       '<div class="modal__header">' +
       '<div><h2 id="product-dialog-title">Product details</h2>' +
-      '<p>Fridge magnet · full details coming soon</p></div>' +
+      '<p>Fridge magnet · handmade in small batches</p></div>' +
       '<button type="button" class="modal__close" data-close aria-label="Close product details">×</button>' +
       "</div>" +
       '<div class="modal__body">' +
@@ -190,7 +190,7 @@
       '<a class="btn btn--pink" href="schedule.html">See sales days</a>' +
       '<a class="btn btn--paper" data-qv-email href="mailto:bitbybitja@gmail.com">Ask about this magnet</a>' +
       "</div>" +
-      '<p class="product-dialog__note">Descriptions and pricing are placeholders for now. ' +
+      '<p class="product-dialog__note">Prices are still being finalized. ' +
       "These magnets are sold in person at our sales days — there is no online checkout.</p>" +
       "</div>" +
       "</div>" +
