@@ -16,106 +16,150 @@
       id: "snowmelts-christmas-star",
       name: "Christmas Star",
       category: "snowmelts",
-      price: null,
+      price: 7,
       image: "assets/img/products/christmas-star.jpg",
-      alt: "Christmas Star fridge magnet made from perler beads, wearing a Santa hat",
+      alt: "Christmas Star fridge magnet made from perler beads",
       badge: "Limited edition",
       badgeClass: "tag--pink",
       blurb:
-        "A perler-bead Christmas star in a Santa hat — festive holiday decor and an easy stocking stuffer.",
-      specs: [
-        ["Collection", "Snowmelts"],
-        ["Format", "Fridge magnet"],
-        ["Details", "To be confirmed"]
-      ]
+        "A perler-bead Christmas star — festive holiday decor and an easy stocking stuffer."
+    },
+    {
+      id: "snowmelts-gingerbread-man",
+      name: "Gingerbread Man",
+      category: "snowmelts",
+      price: 7,
+      image: "assets/img/products/gingerbread-man.jpg",
+      alt: "Gingerbread Man fridge magnet made from perler beads",
+      badge: "Limited edition",
+      badgeClass: "tag--pink",
+      blurb:
+        "A cheerful gingerbread man fused bead by bead — a sweet little holiday magnet."
+    },
+    {
+      id: "snowmelts-snowman",
+      name: "Snowman",
+      category: "snowmelts",
+      price: 7,
+      image: "assets/img/products/snowman.jpg",
+      alt: "Snowman fridge magnet made from perler beads",
+      badge: "Limited edition",
+      badgeClass: "tag--pink",
+      blurb:
+        "A frosty perler-bead snowman for the holiday season — no melting required."
     },
     {
       id: "itty-bitty-canvas-starry-night",
       name: "Starry Night",
       category: "itty-bitty-canvas",
-      price: null,
+      price: 5,
       image: "assets/img/products/starry-night.jpg",
       alt: "Starry Night fridge magnet recreated in perler beads",
       blurb:
-        "Van Gogh's Starry Night rebuilt bead by bead — a tiny masterpiece for the fridge.",
-      specs: [
-        ["Collection", "Itty Bitty Canvas"],
-        ["Format", "Fridge magnet"],
-        ["Details", "To be confirmed"]
-      ]
+        "Van Gogh's Starry Night rebuilt bead by bead — a tiny masterpiece for the fridge."
+    },
+    {
+      id: "itty-bitty-canvas-mona-lisa",
+      name: "Mona Lisa",
+      category: "itty-bitty-canvas",
+      price: 5,
+      image: "assets/img/products/mona-lisa.jpg",
+      alt: "Mona Lisa fridge magnet recreated in perler beads",
+      blurb:
+        "The Mona Lisa in perler beads — a fridge-sized smile that never gets old."
+    },
+    {
+      id: "itty-bitty-canvas-great-wave",
+      name: "Great Wave",
+      category: "itty-bitty-canvas",
+      price: 7,
+      image: "assets/img/products/great-wave.jpg",
+      alt: "Great Wave fridge magnet recreated in perler beads",
+      blurb:
+        "Hokusai's Great Wave, rebuilt in chunky pixels for your fridge door."
     },
     {
       id: "canadots-canada-flag",
       name: "Canada Flag",
       category: "canadots",
-      price: null,
+      price: 5,
       image: "assets/img/products/canada-flag.jpg",
       alt: "Canadian flag fridge magnet made from perler beads",
       blurb:
-        "The maple leaf in perler beads — Canadian culture in the palm of your hand.",
-      specs: [
-        ["Collection", "Canadots"],
-        ["Format", "Fridge magnet"],
-        ["Details", "To be confirmed"]
-      ]
+        "The maple leaf in perler beads — Canadian culture in the palm of your hand."
     },
     {
-      id: "meltimals-crab",
-      name: "Crab",
-      category: "meltimals",
-      price: null,
-      image: "assets/img/products/crab.jpg",
-      alt: "Crab fridge magnet made from perler beads",
+      id: "canadots-maple-syrup",
+      name: "Maple Syrup",
+      category: "canadots",
+      price: 5,
+      image: "assets/img/products/maple-syrup.jpg",
+      alt: "Maple syrup bottle fridge magnet made from perler beads",
       blurb:
-        "A perler-bead animal from the Meltimals line — no fur, no mess.",
-      specs: [
-        ["Collection", "Meltimals"],
-        ["Format", "Fridge magnet"],
-        ["Details", "To be confirmed"]
-      ]
-    },
-    {
-      id: "meltimals-beaver",
-      name: "Beaver",
-      category: "meltimals",
-      price: null,
-      image: "assets/img/products/beaver.jpg",
-      alt: "Beaver fridge magnet made from perler beads",
-      blurb:
-        "A perler-bead animal from the Meltimals line — no fur, no mess.",
-      specs: [
-        ["Collection", "Meltimals"],
-        ["Format", "Fridge magnet"],
-        ["Details", "To be confirmed"]
-      ]
+        "A perler-bead maple syrup bottle — a sweet Canadian icon for the fridge."
     },
     {
       id: "meltimals-cat",
       name: "Cat",
       category: "meltimals",
-      price: null,
+      price: 5,
       image: "assets/img/products/cat.jpg",
       alt: "Cat fridge magnet made from perler beads",
       blurb:
-        "A perler-bead animal from the Meltimals line — no fur, no mess.",
-      specs: [
-        ["Collection", "Meltimals"],
-        ["Format", "Fridge magnet"],
-        ["Details", "To be confirmed"]
-      ]
+        "A perler-bead cat from the Meltimals line — no fur, no mess, all charm."
+    },
+    {
+      id: "meltimals-beaver",
+      name: "Beaver",
+      category: "meltimals",
+      price: 5,
+      image: "assets/img/products/beaver.jpg",
+      alt: "Beaver fridge magnet made from perler beads",
+      blurb:
+        "A perler-bead beaver from the Meltimals line — no fur, no mess, all charm."
+    },
+    {
+      id: "meltimals-crab",
+      name: "Crab",
+      category: "meltimals",
+      price: 5,
+      image: "assets/img/products/crab.jpg",
+      alt: "Crab fridge magnet made from perler beads",
+      blurb:
+        "A perler-bead crab from the Meltimals line — no fur, no mess, all charm."
+    },
+    {
+      id: "meltimals-penguin",
+      name: "Penguin",
+      category: "meltimals",
+      price: 5,
+      image: "assets/img/products/penguin.jpg",
+      alt: "Penguin fridge magnet made from perler beads",
+      blurb:
+        "A perler-bead penguin from the Meltimals line — no fur, no mess, all charm."
+    },
+    {
+      id: "meltimals-grey-penguin",
+      name: "Grey Penguin",
+      category: "meltimals",
+      price: 5,
+      image: "assets/img/products/grey-penguin.jpg",
+      alt: "Grey penguin fridge magnet made from perler beads",
+      blurb:
+        "A grey perler-bead penguin from the Meltimals line — no fur, no mess, all charm."
     }
   ];
 
   var FEATURED_IDS = [
     "snowmelts-christmas-star",
-    "itty-bitty-canvas-starry-night",
+    "itty-bitty-canvas-great-wave",
     "canadots-canada-flag",
-    "meltimals-cat"
+    "meltimals-penguin"
   ];
 
   function money(price) {
     if (price === null || price === undefined || price === "") return "Price TBD";
-    return "$" + Number(price).toFixed(2);
+    return "$" + Number(price).toFixed(2) + " CAD";
   }
 
   function productById(id) {
@@ -123,6 +167,15 @@
       if (PRODUCTS[i].id === id) return PRODUCTS[i];
     }
     return null;
+  }
+
+  function productSpecs(product) {
+    return [
+      ["Collection", CATEGORIES[product.category]],
+      ["Format", "Fridge magnet"],
+      ["Finish", "Hand-fused perler beads"],
+      ["Price", money(product.price)]
+    ];
   }
 
   function cardHTML(product) {
@@ -190,7 +243,7 @@
       '<a class="btn btn--pink" href="schedule.html">See sales days</a>' +
       '<a class="btn btn--paper" data-qv-email href="mailto:bitbybitja@gmail.com">Ask about this magnet</a>' +
       "</div>" +
-      '<p class="product-dialog__note">Prices are still being finalized. ' +
+      '<p class="product-dialog__note">All prices are in Canadian dollars (CAD). ' +
       "These magnets are sold in person at our sales days — there is no online checkout.</p>" +
       "</div>" +
       "</div>" +
@@ -216,7 +269,7 @@
 
     var specs = d.querySelector("[data-qv-specs]");
     specs.innerHTML = "";
-    product.specs.forEach(function (spec) {
+    productSpecs(product).forEach(function (spec) {
       var row = document.createElement("div");
       var dt = document.createElement("dt");
       var dd = document.createElement("dd");
