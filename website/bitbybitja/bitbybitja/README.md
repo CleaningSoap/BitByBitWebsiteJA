@@ -4,21 +4,21 @@ A static storefront for **BitByBit**, a student-run company in the Junior Achiev
 
 The shop is a **fridge magnet** lineup across four collections. **Snowmelts is limited edition; the other three are permanent lines.**
 
-| Collection | Availability | Theme | Catalogue |
-| --- | --- | --- | --- |
-| **Snowmelts** | Limited edition | Christmas | Christmas Star |
-| **Itty Bitty Canvas** | Permanent | Famous painting recreations | Starry Night |
-| **Canadots** | Permanent | Canadian | Canada Flag |
-| **Meltimals** | Permanent | Animals | Crab, Beaver, Cat |
+| Collection | Availability | Theme | Catalogue | Price |
+| --- | --- | --- | --- | --- |
+| **Snowmelts** | Limited edition | Christmas | Christmas Star, Gingerbread Man, Snowman | $7 CAD |
+| **Itty Bitty Canvas** | Permanent | Famous painting recreations | Starry Night, Mona Lisa, Great Wave | $5 CAD (Great Wave $7) |
+| **Canadots** | Permanent | Canadian | Canada Flag, Maple Syrup | $5 CAD |
+| **Meltimals** | Permanent | Animals | Cat, Beaver, Crab, Penguin, Grey Penguin | $5 CAD |
 
-Product photos are real and collection/product descriptions are written. **Prices remain placeholders** (`Price TBD`) until the team supplies numbers. There is no keychain, frame, or desk-product line.
+Product photos are real and the full catalogue is priced in **Canadian dollars (CAD)**. There is no keychain, frame, or desk-product line.
 
 Other live brand details:
 
 - Slogan: **“A bit of fun in every bag.”**
 - Instagram: **[@bitbybitja](https://www.instagram.com/bitbybitja/)** (linked from every footer and the FAQ).
-- Charity pledge: **20% of net proceeds**. The partner is still a placeholder.
-- Next sales days: **November 14 at St. Laurent Mall, Ottawa** and **December 13 at Merivale Mall, Ottawa**.
+- Charity pledge: **20% of net proceeds** to **Upstream Ottawa Mental Health Community Support**.
+- Next sales days: **November 14 at St. Laurent Mall, Ottawa, 11:00 AM–1:00 PM** and **December 13 at Merivale Mall, Ottawa**.
 - Theme palette: light pink `#ffbfdc`, green `#bbec72`, yellow `#ffde59`, pastel azure `#91ccff`, pastel lavender `#c9abe4`.
 
 There are no accounts, sign-in, cart, checkout, or server.
@@ -63,11 +63,11 @@ Default editor code: **`bitbybit-team`** — change it before launch (see the ca
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Home: hero, four collection tiles, featured magnets, story/process photo, charity spotlight, sales-day CTA |
-| `about.html` | Company story, JA program, process photo, values, team placeholders |
+| `index.html` | Home: new banner, four collection tiles, featured magnets, story/process photo, Upstream Ottawa spotlight, sales-day CTA |
+| `about.html` | Company story, JA program, process photo, values |
 | `products.html` | Fridge magnet lookbook with collection filters and quick view |
 | `schedule.html` | **Read-only** public sales-day calendar |
-| `charity.html` | Charity page with a 20% pledge and placeholder partner details |
+| `charity.html` | Charity page for Upstream Ottawa and the 20% pledge |
 | `faq.html` | Help / FAQ with draft placeholder answers |
 | `404.html` | Static not-found page |
 | `schedule-admin.html` | Private team schedule editor — unlinked, `noindex`, code-gated |
@@ -80,27 +80,33 @@ The admin page is not in the navigation, footer, sitemap, or any public page.
 
 - `id`, `name`, `category`, `price`
 - `image`, `alt`
-- optional `badge` / `badgeClass` (only Snowmelts currently uses one)
-- real `blurb`; `specs` still awaiting size and material details
+- optional `badge` / `badgeClass` (Snowmelts items use the limited-edition badge)
+- real `blurb`; quick-view specs are generated from the product's collection, format, finish, and price
 
 Current entries:
 
 | ID | Name | Category | Image |
 | --- | --- | --- | --- |
 | `snowmelts-christmas-star` | Christmas Star | `snowmelts` | `assets/img/products/christmas-star.jpg` |
+| `snowmelts-gingerbread-man` | Gingerbread Man | `snowmelts` | `assets/img/products/gingerbread-man.jpg` |
+| `snowmelts-snowman` | Snowman | `snowmelts` | `assets/img/products/snowman.jpg` |
 | `itty-bitty-canvas-starry-night` | Starry Night | `itty-bitty-canvas` | `assets/img/products/starry-night.jpg` |
+| `itty-bitty-canvas-mona-lisa` | Mona Lisa | `itty-bitty-canvas` | `assets/img/products/mona-lisa.jpg` |
+| `itty-bitty-canvas-great-wave` | Great Wave | `itty-bitty-canvas` | `assets/img/products/great-wave.jpg` |
 | `canadots-canada-flag` | Canada Flag | `canadots` | `assets/img/products/canada-flag.jpg` |
-| `meltimals-crab` | Crab | `meltimals` | `assets/img/products/crab.jpg` |
-| `meltimals-beaver` | Beaver | `meltimals` | `assets/img/products/beaver.jpg` |
+| `canadots-maple-syrup` | Maple Syrup | `canadots` | `assets/img/products/maple-syrup.jpg` |
 | `meltimals-cat` | Cat | `meltimals` | `assets/img/products/cat.jpg` |
+| `meltimals-beaver` | Beaver | `meltimals` | `assets/img/products/beaver.jpg` |
+| `meltimals-crab` | Crab | `meltimals` | `assets/img/products/crab.jpg` |
+| `meltimals-penguin` | Penguin | `meltimals` | `assets/img/products/penguin.jpg` |
+| `meltimals-grey-penguin` | Grey Penguin | `meltimals` | `assets/img/products/grey-penguin.jpg` |
 
 To finish the catalogue:
 
-- Set `price` to a number (for example `8`) to render `$8.00`, or leave it `null` for **Price TBD**.
-- Adjust `specs` for size, materials, and care.
-- Keep every product image at **4:3 (800 × 600)** so cards and quick view stay aligned. The two portrait source photos (flag, crab) were center-cropped to 4:3 during processing.
+- Set `price` to a number (for example `7`) to render `$7.00 CAD`, or leave it `null` for **Price TBD**.
+- Keep every product image at **4:3 (800 × 600)** so cards and quick view stay aligned. The new portrait source photos were center-cropped to 4:3 during processing.
 - Update `FEATURED_IDS` if the home-page selection should change.
-- If the team uses a currency other than `$`, update `money()` in the same file.
+- All prices render with CAD in `money()`. Update that helper if the currency changes.
 
 ### Collection copy
 
@@ -113,19 +119,20 @@ Each collection has one tagline and one description. The full copy renders in th
 | Canadots | Proudly pixelated, eh. | From coast to coast to fridge: Canadian icons in perler beads. |
 | Meltimals | No fur. No mess. All charm. | Perler-bead animals that melt your heart — pick one and give it a home on the fridge. |
 
-Home-page collection tiles use one representative photo per collection and link to the matching `?category=` filter. Collection keys are `snowmelts`, `itty-bitty-canvas`, `canadots`, and `meltimals`.
+Home-page collection tiles and the hero banner use the four collection line photos in `assets/img/collections/` and link to the matching `?category=` filter. Collection keys are `snowmelts`, `itty-bitty-canvas`, `canadots`, and `meltimals`.
 
-Availability is carried by the card badge only where it matters: Snowmelts uses **Limited edition** (`tag--pink`); the three permanent lines are unbadged. The collection copy on the shop page spells out which lines are permanent.
+Availability is carried by the card badge only where it matters: Snowmelts uses **Limited edition** (`tag--pink`); the three permanent lines are unbadged. The collection cards on the shop page also show each line's starting price.
 
 ## Brand assets
 
 - `assets/img/logo-mark.png` — the BitByBit pixel banner logo with the black background removed, transparent, 480 × 614.
 - `assets/img/favicon-64.png`, `favicon-192.png`, `favicon-512.png` — browser tab, Apple touch, and PWA icons generated from the logo.
-- `assets/img/hero.jpg` — home hero background (1600 × 900).
+- `assets/img/collections/*.jpg` — four collection line photos used by the home banner, collection tiles, and collection cards (900 × 675).
 - `assets/img/process.jpg` — behind-the-scenes production photo (1200 × 900), used on the home story and about pages.
-- `assets/img/products/*.jpg` — six product photos, 800 × 600.
+- `assets/img/products/*.jpg` — thirteen product photos, 800 × 600.
+- `assets/img/upstream-ottawa.png` — Upstream Ottawa charity mark, transparent 500 × 500.
 
-The logo is used on dark surfaces (header, footer, community panel), so keep the transparent PNG rather than flattening it onto white.
+The light header, footer, and community panel place the white logo on a dark ink plate, so keep the transparent PNG rather than flattening it onto white.
 
 ## Public calendar is read-only
 
@@ -142,12 +149,12 @@ Published events:
 
 | Date | Event | Location |
 | --- | --- | --- |
-| 2026-11-14 | BitByBit at St. Laurent Mall | St. Laurent Mall, Ottawa |
+| 2026-11-14, 11:00 AM–1:00 PM | BitByBit at St. Laurent Mall | St. Laurent Mall, Ottawa |
 | 2026-12-13 | BitByBit at Merivale Mall | Merivale Mall, Ottawa |
 
-Times are not set yet, so the public calendar shows **Time TBA** until the team adds start/end times. The page opens on the next month that has a sales day instead of the current month when the current month is empty.
+St. Laurent Mall is published as **11:00 AM–1:00 PM**. Merivale Mall still shows **Time TBA** until the team adds its start/end times. The page opens on the next month that has a sales day instead of the current month when the current month is empty.
 
-To publish a change, use the team editor or edit `assets/js/schedule-data.js` directly, then bump the `?v=` query on the `schedule-data.js` script in `schedule.html` and `schedule-admin.html` (currently `?v=initial`) or purge the host cache.
+To publish a change, use the team editor or edit `assets/js/schedule-data.js` directly, then bump the `?v=` query on the `schedule-data.js` script in `schedule.html` and `schedule-admin.html` (currently `?v=second`) or purge the host cache.
 
 ## Team calendar editor
 
@@ -168,7 +175,7 @@ Open `schedule-admin.html` directly. It is protected by a simple shared code gat
 3. **Download published file** generates a fresh `schedule-data.js`.
 4. Replace `assets/js/schedule-data.js` with the downloaded file.
 5. Redeploy the site.
-6. Bump the letters-only `?v=initial` query string on the schedule-data script in `schedule.html` and `schedule-admin.html` (for example `?v=second`, then `?v=third`) or purge the host cache so visitors receive the new dates.
+6. Bump the letters-only `?v=second` query string on the schedule-data script in `schedule.html` and `schedule-admin.html` (for example `?v=third`, then `?v=fourth`) or purge the host cache so visitors receive the new dates.
 
 The public page reads only the static published file. Editing the local draft does not change what visitors see until the file is replaced and deployed.
 
@@ -182,13 +189,12 @@ Editor details:
 
 ## Home banner
 
-The home-page hero banner is static markup in `index.html`:
+The new home banner is a light, pastel hero built from markup and the four collection line photos:
 
-- Eyebrow, headline, description, CTA label/link, and accent color (`--hero-accent`) live in the `#hero` section.
-- The background image is `assets/img/hero.jpg`.
-- The hero background is decorative (`alt=""`); keep the copy meaningful without it.
-
-To change the banner for visitors, edit that section directly. There is no in-browser banner editor.
+- Copy lives in `.hero__content`; the four linked collection cards live in `.hero__banner`.
+- Collection images are `assets/img/collections/*.jpg`; each card links to its `?category=` shop filter.
+- The background is a CSS pastel gradient with a pegboard dot texture. No hero background image is required.
+- To change the banner, edit the `#hero` section in `index.html`. There is no in-browser banner editor.
 
 ## Contact details
 
@@ -213,32 +219,23 @@ All colours live in `:root` in `assets/css/site.css`:
 --lavender: #c9abe4;
 ```
 
-Legacy aliases (`--mint`, `--lemon`, `--blue`, `--purple`) point at the new values, and soft background tints are defined alongside them. Calendar category colours in `assets/js/schedule-core.js` and the legend dots in the schedule pages use the same palette.
+The site uses light cream, pink, azure, and lavender surfaces with deep plum text and borders. Legacy aliases (`--mint`, `--lemon`, `--blue`, `--purple`) point at the palette values, and soft background tints are defined alongside them. Calendar category colours in `assets/js/schedule-core.js` and the legend dots in the schedule pages use the same palette.
 
 Typography uses Pixelify Sans for headings and buttons, and Inter (`--label`) for small uppercase labels: navigation, breadcrumbs, eyebrows, tags, filter buttons, product cards, table labels, and footer headings. This keeps the pixel look while making short words such as “Charity” legible at small sizes. Donation and statistic figures also use Inter with tabular numerals so digits such as the `2` in `20%` read clearly.
 
-## Image placeholders still in use
+## Images
 
-Real product, process, hero, and logo images are in place. These placeholders remain:
+Real product, collection, process, logo, and charity images are in place. There are no image placeholders left.
 
-| File | Used for | Recommended |
-| --- | --- | --- |
-| `assets/img/charity-placeholder.svg` | Charity page + home charity spotlight | 1200 × 800 |
-| `assets/img/team-placeholder.svg` | About team cards + group photo slot | 600 × 600 |
+- Product photo paths live in `assets/js/products.js`; collection photo paths live in `index.html` and `products.html`.
+- Use compressed WebP/JPEG for new photos. If an aspect ratio changes, update the `width`/`height` attributes and the relevant CSS `aspect-ratio`.
+- Product cards and quick view use 4:3 images; collection tiles crop square; collection cards crop 16:10.
 
-Notes:
+## Content still to confirm
 
-- Page-level photos in `<figure class="img-frame" data-slot="…">` show a small **IMG SLOT** badge. Remove the `data-slot` attribute after swapping in a real photo.
-- Product photo paths live in `assets/js/products.js`; collection tile paths are in `index.html`.
-- Use compressed WebP/JPEG for new photos. If the aspect ratio changes, update the `width`/`height` attributes and the relevant CSS `aspect-ratio`.
-
-## Placeholder content to replace
-
-- Charity partner name, mission, location, website, and story (20% pledge is real).
-- Team names and photos on the about page.
-- FAQ draft answers for shipping, payment, reservations, and custom lead times.
-- **Price TBD** labels and product size/material specs.
-- Sales-day times.
+- FAQ answers for shipping, payment, reservations, and custom lead times.
+- Product size and material details.
+- Merivale Mall sales-day times.
 
 ## Structure
 
@@ -265,11 +262,12 @@ bitbybitja/
     │   ├── schedule.js      # read-only public calendar
     │   └── schedule-admin.js# private team editor/draft/publish
     └── img/
-        ├── products/        # six 800 × 600 product photos
+        ├── products/        # thirteen 800 × 600 product photos
+        ├── collections/     # four 900 × 675 collection line photos
         ├── logo-mark.png    # transparent brand logo
-        ├── hero.jpg
+        ├── upstream-ottawa.png
         ├── process.jpg
-        └── …                # favicon, charity/team placeholders
+        └── …                # favicon
 ```
 
 ## Accessibility and behavior notes
