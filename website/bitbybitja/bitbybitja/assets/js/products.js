@@ -17,7 +17,7 @@
       name: "Christmas Star",
       category: "snowmelts",
       price: 7,
-      image: "assets/img/products/christmas-star.jpg",
+      image: "assets/img/products/Christmas Star.jpg",
       alt: "Christmas Star fridge magnet made from perler beads",
       badge: "Limited edition",
       badgeClass: "tag--pink",
@@ -29,7 +29,7 @@
       name: "Gingerbread Man",
       category: "snowmelts",
       price: 7,
-      image: "assets/img/products/gingerbread-man.jpg",
+      image: "assets/img/products/gingerbreadman.jpg",
       alt: "Gingerbread Man fridge magnet made from perler beads",
       badge: "Limited edition",
       badgeClass: "tag--pink",
@@ -53,7 +53,7 @@
       name: "Starry Night",
       category: "itty-bitty-canvas",
       price: 5,
-      image: "assets/img/products/starry-night.jpg",
+      image: "assets/img/products/starrynight.jpg",
       alt: "Starry Night fridge magnet recreated in perler beads",
       blurb:
         "Van Gogh's Starry Night rebuilt bead by bead — a tiny masterpiece for the fridge."
@@ -63,7 +63,7 @@
       name: "Mona Lisa",
       category: "itty-bitty-canvas",
       price: 5,
-      image: "assets/img/products/mona-lisa.jpg",
+      image: "assets/img/products/monalisa.jpg",
       alt: "Mona Lisa fridge magnet recreated in perler beads",
       blurb:
         "The Mona Lisa in perler beads — a fridge-sized smile that never gets old."
@@ -73,7 +73,7 @@
       name: "Great Wave",
       category: "itty-bitty-canvas",
       price: 7,
-      image: "assets/img/products/great-wave.jpg",
+      image: "assets/img/products/greatwave.jpg",
       alt: "Great Wave fridge magnet recreated in perler beads",
       blurb:
         "Hokusai's Great Wave, rebuilt in chunky pixels for your fridge door."
@@ -93,7 +93,7 @@
       name: "Maple Syrup",
       category: "canadots",
       price: 5,
-      image: "assets/img/products/maple-syrup.jpg",
+      image: "assets/img/products/syrup.jpg",
       alt: "Maple syrup bottle fridge magnet made from perler beads",
       blurb:
         "A perler-bead maple syrup bottle — a sweet Canadian icon for the fridge."
@@ -103,7 +103,7 @@
       name: "Cat",
       category: "meltimals",
       price: 5,
-      image: "assets/img/products/cat.jpg",
+      image: "assets/img/products/Cat.jpg",
       alt: "Cat fridge magnet made from perler beads",
       blurb:
         "A perler-bead cat from the Meltimals line — no fur, no mess, all charm."
@@ -113,7 +113,7 @@
       name: "Beaver",
       category: "meltimals",
       price: 5,
-      image: "assets/img/products/beaver.jpg",
+      image: "assets/img/products/Beaver.jpg",
       alt: "Beaver fridge magnet made from perler beads",
       blurb:
         "A perler-bead beaver from the Meltimals line — no fur, no mess, all charm."
@@ -123,7 +123,7 @@
       name: "Crab",
       category: "meltimals",
       price: 5,
-      image: "assets/img/products/crab.jpg",
+      image: "assets/img/products/Crab.jpg",
       alt: "Crab fridge magnet made from perler beads",
       blurb:
         "A perler-bead crab from the Meltimals line — no fur, no mess, all charm."
@@ -143,7 +143,7 @@
       name: "Grey Penguin",
       category: "meltimals",
       price: 5,
-      image: "assets/img/products/grey-penguin.jpg",
+      image: "assets/img/products/greypenguin.jpg",
       alt: "Grey penguin fridge magnet made from perler beads",
       blurb:
         "A grey perler-bead penguin from the Meltimals line — no fur, no mess, all charm."
