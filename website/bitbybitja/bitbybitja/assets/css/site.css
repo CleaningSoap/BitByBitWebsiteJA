@@ -1266,6 +1266,22 @@ main:focus {
   aspect-ratio: 1 / 1;
 }
 
+.img-frame--portrait img {
+  aspect-ratio: 4 / 5;
+}
+
+.img-frame figcaption {
+  padding: 10px 14px;
+  border-top: var(--border);
+  background: var(--surface);
+  font-family: var(--label);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 .charity-logo-frame {
   background: linear-gradient(135deg, var(--pink-soft), var(--azure-soft));
 }
@@ -1277,11 +1293,20 @@ main:focus {
   padding: clamp(28px, 5vw, 56px);
 }
 
-.feature__copy h2 {
+.feature__copy h2,
+.feature__copy h3 {
   margin-top: 14px;
   font-family: var(--display);
   font-size: clamp(2rem, 4vw, 3.1rem);
   line-height: 0.98;
+}
+
+.feature__copy h3 {
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+}
+
+.packed-feature {
+  margin-top: clamp(34px, 5vw, 56px);
 }
 
 .feature__copy p {
