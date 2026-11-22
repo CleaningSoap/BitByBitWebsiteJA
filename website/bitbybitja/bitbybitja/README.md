@@ -8,8 +8,8 @@ The shop is a **fridge magnet** lineup across four collections. **Snowmelts is l
 | --- | --- | --- | --- | --- |
 | **Snowmelts** | Limited edition | Christmas | Christmas Star, Gingerbread Man, Snowman | $7 CAD |
 | **Itty Bitty Canvas** | Permanent | Famous painting recreations | Starry Night, Mona Lisa, Great Wave | $5 CAD (Great Wave $7) |
-| **Canadots** | Permanent | Canadian | Canada Flag, Maple Syrup | $5 CAD |
-| **Meltimals** | Permanent | Animals | Cat, Beaver, Crab, Penguin, Grey Penguin | $5 CAD |
+| **Canadots** | Permanent | Canadian | Canada Flag, Maple Syrup, Beaver | $5 CAD (Canada Flag $7) |
+| **Meltimals** | Permanent | Animals | Cat, Crab, Penguin, Grey Penguin, Octopus | $5 CAD (Cat $7) |
 
 Product photos are real and the full catalogue is priced in **Canadian dollars (CAD)**. There is no keychain, frame, or desk-product line.
 
@@ -17,8 +17,8 @@ Other live brand details:
 
 - Slogan: **“A bit of fun in every bag.”**
 - Instagram: **[@bitbybitja](https://www.instagram.com/bitbybitja/)** (linked from every footer and the FAQ).
-- Charity pledge: **20% of net proceeds** to **Upstream Ottawa Mental Health Community Support**.
-- Next sales days: **November 14 at St. Laurent Mall, Ottawa, 11:00 AM–1:00 PM** and **December 13 at Merivale Mall, Ottawa**.
+- Charity pledge: **25% of net proceeds** to **Upstream Ottawa Mental Health Community Support**.
+- Next sales days: **November 14 at St. Laurent Mall, Ottawa, 9:00 AM–1:00 PM** and **December 13 at Merivale Mall, Ottawa**.
 - Theme palette: light pink `#ffbfdc`, green `#bbec72`, yellow `#ffde59`, pastel azure `#91ccff`, pastel lavender `#c9abe4`.
 
 There are no accounts, sign-in, cart, checkout, or server.
@@ -63,12 +63,12 @@ Default editor code: **`bitbybit-team`** — change it before launch (see the ca
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Home: new banner, four collection tiles, featured magnets, story/process photo, Upstream Ottawa spotlight, sales-day CTA |
+| `index.html` | Home: new banner, four collection tiles, featured magnets, story/process photo, Upstream Ottawa spotlight, sales-day photo and CTA |
 | `about.html` | Company story, JA program, process photo, values |
-| `products.html` | Fridge magnet lookbook with collection filters and quick view |
+| `products.html` | Fridge magnet lookbook with collection filters, quick view, and a packaging photo |
 | `schedule.html` | **Read-only** public sales-day calendar |
-| `charity.html` | Charity page for Upstream Ottawa and the 20% pledge |
-| `faq.html` | Help / FAQ with draft placeholder answers |
+| `charity.html` | Charity page for Upstream Ottawa and the 25% pledge |
+| `faq.html` | Help / FAQ for orders, custom work, sales days, and product care |
 | `404.html` | Static not-found page |
 | `schedule-admin.html` | Private team schedule editor — unlinked, `noindex`, code-gated |
 
@@ -95,11 +95,12 @@ Current entries:
 | `itty-bitty-canvas-great-wave` | Great Wave | `itty-bitty-canvas` | `assets/img/products/great-wave.jpg` |
 | `canadots-canada-flag` | Canada Flag | `canadots` | `assets/img/products/canada-flag.jpg` |
 | `canadots-maple-syrup` | Maple Syrup | `canadots` | `assets/img/products/maple-syrup.jpg` |
+| `canadots-beaver` | Beaver | `canadots` | `assets/img/products/beaver.jpg` |
 | `meltimals-cat` | Cat | `meltimals` | `assets/img/products/cat.jpg` |
-| `meltimals-beaver` | Beaver | `meltimals` | `assets/img/products/beaver.jpg` |
 | `meltimals-crab` | Crab | `meltimals` | `assets/img/products/crab.jpg` |
 | `meltimals-penguin` | Penguin | `meltimals` | `assets/img/products/penguin.jpg` |
 | `meltimals-grey-penguin` | Grey Penguin | `meltimals` | `assets/img/products/grey-penguin.jpg` |
+| `meltimals-octopus` | Octopus | `meltimals` | `assets/img/products/octopus.jpg` |
 
 To finish the catalogue:
 
@@ -129,7 +130,9 @@ Availability is carried by the card badge only where it matters: Snowmelts uses 
 - `assets/img/favicon-64.png`, `favicon-192.png`, `favicon-512.png` — browser tab, Apple touch, and PWA icons generated from the logo.
 - `assets/img/collections/*.jpg` — four collection line photos used by the home banner, collection tiles, and collection cards (900 × 675).
 - `assets/img/process.jpg` — behind-the-scenes production photo (1200 × 900), used on the home story and about pages.
-- `assets/img/products/*.jpg` — thirteen product photos, 800 × 600.
+- `assets/img/sales-day.jpg` — sales table with price list and bagged magnets (900 × 1125), used in the home Find us section.
+- `assets/img/packed-bag.jpg` — Snowmelts magnets in a tagged mesh bag (900 × 1125), used on the shop page.
+- `assets/img/products/*.jpg` — fourteen product photos, 800 × 600.
 - `assets/img/upstream-ottawa.png` — Upstream Ottawa charity mark, transparent 500 × 500.
 
 The light header, footer, and community panel place the white logo on a dark ink plate, so keep the transparent PNG rather than flattening it onto white.
@@ -149,12 +152,12 @@ Published events:
 
 | Date | Event | Location |
 | --- | --- | --- |
-| 2026-11-14, 11:00 AM–1:00 PM | BitByBit at St. Laurent Mall | St. Laurent Mall, Ottawa |
+| 2026-11-14, 9:00 AM–1:00 PM | BitByBit at St. Laurent Mall | St. Laurent Mall, Ottawa |
 | 2026-12-13 | BitByBit at Merivale Mall | Merivale Mall, Ottawa |
 
-St. Laurent Mall is published as **11:00 AM–1:00 PM**. Merivale Mall still shows **Time TBA** until the team adds its start/end times. The page opens on the next month that has a sales day instead of the current month when the current month is empty.
+St. Laurent Mall is published as **9:00 AM–1:00 PM**. Merivale Mall still shows **Time TBA** until the team adds its start/end times. The page opens on the next month that has a sales day instead of the current month when the current month is empty.
 
-To publish a change, use the team editor or edit `assets/js/schedule-data.js` directly, then bump the `?v=` query on the `schedule-data.js` script in `schedule.html` and `schedule-admin.html` (currently `?v=second`) or purge the host cache.
+To publish a change, use the team editor or edit `assets/js/schedule-data.js` directly, then bump the `?v=` query on the `schedule-data.js` script in `schedule.html` and `schedule-admin.html` (currently `?v=third`) or purge the host cache.
 
 ## Team calendar editor
 
@@ -221,7 +224,7 @@ All colours live in `:root` in `assets/css/site.css`:
 
 The site uses light cream, pink, azure, and lavender surfaces with deep plum text and borders. Legacy aliases (`--mint`, `--lemon`, `--blue`, `--purple`) point at the palette values, and soft background tints are defined alongside them. Calendar category colours in `assets/js/schedule-core.js` and the legend dots in the schedule pages use the same palette.
 
-Typography uses Pixelify Sans for headings and buttons, and Inter (`--label`) for small uppercase labels: navigation, breadcrumbs, eyebrows, tags, filter buttons, product cards, table labels, and footer headings. This keeps the pixel look while making short words such as “Charity” legible at small sizes. Donation and statistic figures also use Inter with tabular numerals so digits such as the `2` in `20%` read clearly.
+Typography uses Pixelify Sans for headings and buttons, and Inter (`--label`) for small uppercase labels: navigation, breadcrumbs, eyebrows, tags, filter buttons, product cards, table labels, and footer headings. This keeps the pixel look while making short words such as “Charity” legible at small sizes. Donation and statistic figures also use Inter with tabular numerals so digits such as the `2` in `25%` read clearly.
 
 ## Images
 
@@ -233,7 +236,6 @@ Real product, collection, process, logo, and charity images are in place. There 
 
 ## Content still to confirm
 
-- FAQ answers for shipping, payment, reservations, and custom lead times.
 - Product size and material details.
 - Merivale Mall sales-day times.
 
@@ -262,11 +264,13 @@ bitbybitja/
     │   ├── schedule.js      # read-only public calendar
     │   └── schedule-admin.js# private team editor/draft/publish
     └── img/
-        ├── products/        # thirteen 800 × 600 product photos
+        ├── products/        # fourteen 800 × 600 product photos
         ├── collections/     # four 900 × 675 collection line photos
         ├── logo-mark.png    # transparent brand logo
         ├── upstream-ottawa.png
         ├── process.jpg
+        ├── sales-day.jpg
+        ├── packed-bag.jpg
         └── …                # favicon
 ```
 
