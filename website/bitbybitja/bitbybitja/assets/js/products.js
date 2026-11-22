@@ -82,7 +82,7 @@
       id: "canadots-canada-flag",
       name: "Canada Flag",
       category: "canadots",
-      price: 5,
+      price: 7,
       image: "assets/img/products/canada-flag.jpg",
       alt: "Canadian flag fridge magnet made from perler beads",
       blurb:
@@ -112,7 +112,7 @@
       id: "meltimals-cat",
       name: "Cat",
       category: "meltimals",
-      price: 5,
+      price: 7,
       image: "assets/img/products/cat.jpg",
       alt: "Cat fridge magnet made from perler beads",
       blurb:
@@ -147,6 +147,16 @@
       alt: "Grey penguin fridge magnet made from perler beads",
       blurb:
         "A grey perler-bead penguin from the Meltimals line — no fur, no mess, all charm."
+    },
+    {
+      id: "meltimals-octopus",
+      name: "Octopus",
+      category: "meltimals",
+      price: 5,
+      image: "assets/img/products/octopus.jpg",
+      alt: "Octopus fridge magnet made from perler beads",
+      blurb:
+        "A perler-bead octopus from the Meltimals line — no fur, no mess, all charm."
     }
   ];
 
